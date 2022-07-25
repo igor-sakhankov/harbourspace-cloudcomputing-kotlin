@@ -20,6 +20,12 @@ class WelcomeController {
         return "Hello Harbour"
     }
 
+
+    @RequestMapping("/health")
+    fun health(): String {
+        return "OK"
+    }
+
     @GetMapping("/host_id")
     fun getHostId(): String {
         return HOST_UUID.toString()
